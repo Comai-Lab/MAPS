@@ -40,14 +40,14 @@ Below is the individual documentation for the two programs of the MAPS package.
 
 This program takes a parsed mpileup file and generates a "interesting" position file that serves as input to the second part of the MAPS pipeline. This first step is typically run once while the second program can be run quickly many times to try different mutation cutoffs.
 
-INPUT: This program takes a parsed mpileup.txt file as input.
+INPUT: This program takes a parsed mpileup.txt file as input.  
 
 OUTPUT:
 
--   First, the user specifies an output file name for the positions of interest, this is used as input for the second MAPS program.
--   There is an assay-[input file name] file generated that is an assay of the coverage of all "good" positions that pass the basic cutoffs.
--   There is a snps-[input file name] file generated that records any "good" position that is a SNP position (a position that is polymporphic between the reference genome and the samples) across all libraries that have data for that position.
--   There is a types-[input file name] file generated that outputs the counts of the different types of positions found. Only "good" positions are counted
+-   First, the user specifies an output file name for the positions of interest, this is used as input for the second MAPS program.   
+-   There is an assay-[input file name] file generated that is an assay of the coverage of all "good" positions that pass the basic cutoffs.   
+-   There is a snps-[input file name] file generated that records any "good" position that is a SNP position (a position that is polymporphic between the reference genome and the samples) across all libraries that have data for that position.   
+-   There is a types-[input file name] file generated that outputs the counts of the different types of positions found. Only "good" positions are counted.  
 
 A position is defined as "good" if it passes the cutoffs for minimum position coverage, maximum position coverage, and minimum of libraries with data for that position. This is also what we mean by assayed.
 
@@ -67,19 +67,19 @@ NOTE:
 
 PARAMETERS, Default value in []:
 
-REQUIRED:
--f or --file, The input parsed mpileup file. [required]
--o or --out, The output interesting position destination file. [required]
+REQUIRED:   
+-f or --file, The input parsed mpileup file. [required].  
+-o or --out, The output interesting position destination file. [required].  
 
-OPTIONAL:
--t or --thread, Number of cores to be used while processing [1]
--l or --MinLibs, Minimum number of libraries covered at least once to be considered a valid position. [3]
---minCov or -v, Minimum total coverage to be considered as a valid position. Total coverage is the sum of the coverage at that position in all invididual libraries. [10]
---maxCov or -c, Maximum total position coverage to be considered as a valid position. Total coverage is the sum of the coverage at that position in all invididual libraries. [2000]
---hetBothMinPer or -b, Minimum percentage for consideration of heterozygous position for both bases combined [95.00], i.e. % SNP base 1 and %SNP base 2 percent must sum to above this cutoff. This is based on the total coverage at a position. For example, if a base has the following coverage: 20A (50%), 16T (40%) and 4G (10%). SNP1 is A and SNP2 is T. SNP1 + SNP2 = 90%.
---hetOneMinPer or -i, :Minimum percentage for consideration of heterozygous position for each of the two most common bases.[20.00] Each of the two SNP abse percentages must be at least this cutoff percent.
---minCovNonMutBase or -u, Minimum coverage of a non-mutant base [5] --mode or -m, Output Mode: m == Mutation Detection, g == Genotyping [m]
---mutHet or -H, this will allow the positions classified as heterozygous through to the output file instead of counting them and filtering them out in MAPS1. Use this to allow het positions into MAPS2. (Note that mutation detection mode on classified heterozygous positions in MAPS2 has not been tested)
+OPTIONAL:   
+-t or --thread, Number of cores to be used while processing [1].  
+-l or --MinLibs, Minimum number of libraries covered at least once to be considered a valid position. [3].  
+--minCov or -v, Minimum total coverage to be considered as a valid position. Total coverage is the sum of the coverage at that position in all invididual libraries. [10].  
+--maxCov or -c, Maximum total position coverage to be considered as a valid position. Total coverage is the sum of the coverage at that position in all invididual libraries. [2000]. 
+--hetBothMinPer or -b, Minimum percentage for consideration of heterozygous position for both bases combined [95.00], i.e. % SNP base 1 and  %SNP base 2 percent must sum to above this cutoff. This is based on the total coverage at a position. For example, if a base has the following coverage: 20A (50%), 16T (40%) and 4G (10%). SNP1 is A and SNP2 is T. SNP1 + SNP2 = 90%.   
+--hetOneMinPer or -i, :Minimum percentage for consideration of heterozygous position for each of the two most common bases.[20.00] Each of the two SNP abse percentages must be at least this cutoff percent.   
+--minCovNonMutBase or -u, Minimum coverage of a non-mutant base [5] --mode or -m, Output Mode: m == Mutation Detection, g == Genotyping [m].  
+--mutHet or -H, this will allow the positions classified as heterozygous through to the output file instead of counting them and filtering them out in MAPS1. Use this to allow het positions into MAPS2. (Note that mutation detection mode on classified heterozygous positions in MAPS2 has not been tested).  
 
 ##### MAPS -- Part 2, maps-part2.py
 
