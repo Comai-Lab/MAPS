@@ -89,14 +89,14 @@ INPUT:\
 This program takes the list of potentially interesting position from the MAPS part 1 program as input.
 
 OUTPUT:\
-The user specifies an output file name for the output mutation / gentoyping file.\. 
-There is an non-assay-[input file name] file generated that is a table of the assayed positions that are lost do to cutoff parameters.  
+The user specifies an output file name for the output mutation / gentoyping file.\.    
+There is an non-assay-[input file name] file generated that is a table of the assayed positions that are lost do to cutoff parameters.   
 
 PARAMETERS, Default value in []:
 
-REQUIRED:
--f or --file, The input file is the output of the MAPS part 1 program [required]  
--o or --out, The output mutation / gentotyping file [required].  
+REQUIRED:   
+-f or --file, The input file is the output of the MAPS part 1 program [required]   
+-o or --out, The output mutation / gentotyping file [required].   
 
 OPTIONAL:  
 In both Modes:  
