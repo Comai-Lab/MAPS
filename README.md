@@ -96,22 +96,23 @@ PARAMETERS, Default value in []:
 
 REQUIRED:
 -f or --file, The input file is the output of the MAPS part 1 program [required]  
--o or --out, The output mutation / gentotyping file [required]. 
+-o or --out, The output mutation / gentotyping file [required].
+
 OPTIONAL:  
 In both Modes:  
--l or --MinLibs, Minimum number of libraries covered at least once to be considered a valid position. Should be the same as MAPS part 1. [3]. 
---mode or -m, Output Mode: m == Mutation Detection, g == Genotyping. Should be the same as MAPS part 1. [m]. 
---minCov or -v, Minimum total position coverage to be considered as a valid position. Should be the same as MAPS part 1. [1]. 
+-l or --MinLibs, Minimum number of libraries covered at least once to be considered a valid position. Should be the same as MAPS part 1 [3]. 
+--mode or -m, Output Mode: m == Mutation Detection, g == Genotyping. Should be the same as MAPS part 1 [m]. 
+--minCov or -v, Minimum total position coverage to be considered as a valid position. Should be the same as MAPS part 1 [1]. 
 
 The next four parameters analyze the basecalls at a particular position and for a particular library.  
 In genotyping mode: each library is dealt with independently.  
---hetMinCov or -d, minimum coverage of each of the two observed major basecalls in order to be called heterozygous for that library. [5]. 
---hetMinPer or -p, minimum percentage of each of the two observed major basecalls in order to be called heterozygous for that library. [20.00]. 
---hetMinLibCov or -D, Minimum total coverage for consideration of heterozygous. This parameter is only used in genotyping mode. [5]. 
---homMinCov or -s, Minimum coverage in order for a position to be called homozygous for that library. [2]. 
+--hetMinCov or -d, minimum coverage of each of the two observed major basecalls in order to be called heterozygous for that library [5]. 
+--hetMinPer or -p, minimum percentage of each of the two observed major basecalls in order to be called heterozygous for that library [20.00]. 
+--hetMinLibCov or -D, Minimum total coverage for consideration of heterozygous. This parameter is only used in genotyping mode [5]. 
+--homMinCov or -s, Minimum coverage in order for a position to be called homozygous for that library [2]. 
 
 In mutation detection mode: a potential "mutant" allele is determined as present in only one library and not in any of the others (which all carry the WT allele).  
 Whether or not it qualifies as a potential mutation depends on the following criteria:  
---hetMinCov or -d, minimum coverage of mutant allele to be called heterozygous for that library [5]. 
---hetMinPer or -p, minimum percentage of the mutant and WT alleles in order to be called heterozygous for that library. [20.00]. 
---homMinCov or -s, Minimum coverage in order for a position to be called homozygous for that library. [2]. 
+--hetMinCov or -d, minimum coverage of mutant allele to be called heterozygous for that library [5].  
+--hetMinPer or -p, minimum percentage of the mutant and WT alleles in order to be called heterozygous for that library [20.00].  
+--homMinCov or -s, Minimum coverage in order for a position to be called homozygous for that library [2].  
