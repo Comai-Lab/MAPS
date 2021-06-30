@@ -78,7 +78,8 @@ OPTIONAL:
 --maxCov or -c, Maximum total position coverage to be considered as a valid position. Total coverage is the sum of the coverage at that position in all invididual libraries. [2000]. 
 --hetBothMinPer or -b, Minimum percentage for consideration of heterozygous position for both bases combined [95.00], i.e. % SNP base 1 and  %SNP base 2 percent must sum to above this cutoff. This is based on the total coverage at a position. For example, if a base has the following coverage: 20A (50%), 16T (40%) and 4G (10%). SNP1 is A and SNP2 is T. SNP1 + SNP2 = 90%.   
 --hetOneMinPer or -i, :Minimum percentage for consideration of heterozygous position for each of the two most common bases.[20.00] Each of the two SNP abse percentages must be at least this cutoff percent.   
---minCovNonMutBase or -u, Minimum coverage of a non-mutant base [5] --mode or -m, Output Mode: m == Mutation Detection, g == Genotyping [m].  
+--minCovNonMutBase or -u, Minimum coverage of a non-mutant base [5].   
+--mode or -m, Output Mode: m == Mutation Detection, g == Genotyping [m].  
 --mutHet or -H, this will allow the positions classified as heterozygous through to the output file instead of counting them and filtering them out in MAPS1. Use this to allow het positions into MAPS2. (Note that mutation detection mode on classified heterozygous positions in MAPS2 has not been tested).  
 
 ##### MAPS -- Part 2, maps-part2.py
