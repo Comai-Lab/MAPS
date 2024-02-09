@@ -17,9 +17,16 @@ AND
 ./maps-part2.py -h OR ./maps-part2.py --help
 
 The program is run in two steps to allow the second step to be quickly run repeatedly, allowing fast optimization of the final cutoff parameters.
+* * * * *
 
-#####\
-Run Example, for a parsed mpileup file parsed_test_mpileup.txt.
+##### CITING MAPS
+
+Please cite:
+-    Isabelle M. Henry, Ugrappa Nagalakshmi, Meric C. Lieberman, Kathie J. Ngo, Ksenia V. Krasileva, Hans Vasquez-Gross, Alina Akhunova, Eduard Akhunov, Jorge Dubcovsky, Thomas H. Tai, Luca Comai, Efficient Genome-Wide Detection and Cataloging of EMS-Induced Mutations Using Exome Capture and Next-Generation Sequencing, The Plant Cell, Volume 26, Issue 4, April 2014, Pages 1382–1397, https://doi.org/10.1105/tpc.113.121590
+
+* * * * *
+
+##### Run Example, for a parsed mpileup file parsed_test_mpileup.txt.
 
 Step 1: To run in mutation mode with 10 threads, minimum of 6 libraries, minimum coverage of 20, maximum coverage of 2000, and default heterozygous position parameters:
 
